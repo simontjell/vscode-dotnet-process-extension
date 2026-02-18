@@ -1,0 +1,40 @@
+{
+  "name": "vscode-dotnet-process-extension",
+  "displayName": "Dotnet Process Finder",
+  "description": "An extension that finds and copies the output of a .NET process based on the current file.",
+  "version": "0.2.1",
+  "publisher": "Simple Systemer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simontjell/vscode-dotnet-process-extension"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.findDotnetProcess"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.findDotnetProcess",
+        "title": "Find .NET Process for current file"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./tsconfig.json",
+    "watch": "tsc -watch -p ./tsconfig.json",
+    "prepackage": "node -e \"const p=require('./package.json'); const f=p.name+'-'+p.version+'.vsix'; if(require('fs').existsSync(f)){console.error('ERROR: '+f+' already exists. Bump the version in package.json first.');process.exit(1)}\"",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "vsce": "^2.15.0",
+    "vscode": "^1.1.37",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  }
+}
