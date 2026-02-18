@@ -2,7 +2,7 @@
   "name": "vscode-dotnet-process-extension",
   "displayName": "Dotnet Process Finder",
   "description": "An extension that finds and copies the output of a .NET process based on the current file.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publisher": "Simple Systemer",
   "repository": {
     "type": "git",
